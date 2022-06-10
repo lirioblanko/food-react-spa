@@ -6,3 +6,16 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.content {
+  min-height: calc(100vh - 64px - 50px);
+  padding: 1.5rem 0;
+}
+
+nav {
+  padding: 0 1rem;
+}
+
+.page-footer {
+  padding-top: 0;
+}

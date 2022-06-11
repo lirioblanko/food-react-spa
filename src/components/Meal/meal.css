@@ -1,0 +1,35 @@
+.meal-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.meal-item {
+    box-shadow: none;
+    margin: 0;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.meal-item:hover .meal-img {
+    transform: scale(1.1);
+}
+
+.meal-img {
+    transition: all 1s linear;
+}
+
+.meal-title {
+    font-size: 18px!important;
+    margin-top: 1rem;
+    font-weight: 400!important;
+    color: #4b4b4b;
+    transition: all 0.1s linear;
+}
+
+.meal-item:hover .meal-title {
+    font-weight: 500!important;
+}

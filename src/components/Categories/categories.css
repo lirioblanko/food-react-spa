@@ -1,0 +1,52 @@
+.categories-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.categories-item {
+    box-shadow: none;
+    padding: 1rem;
+    margin: 0;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.categories-item:hover .categories-img {
+    transform: scale(1.1);
+}
+
+.categories-img {
+    transition: all 1s linear;
+}
+
+.categories-title {
+    font-size: 20px!important;
+    margin-top: 1rem;
+    font-weight: 400!important;
+    color: #4b4b4b;
+    transition: all 0.1s linear;
+}
+
+.categories-item:hover .categories-title {
+    font-weight: 500!important;
+}
+
+.color-one {
+    background-color: #F0F2F2;
+}
+
+.color-two {
+    background-color: #A7BDD9;
+}
+
+.color-three {
+    background-color: #BDD9F2;
+}
+
+.color-four {
+    background-color: #88AABF;
+}

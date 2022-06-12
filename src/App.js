@@ -5,8 +5,7 @@ import {
     Navigate
 } from "react-router-dom";
 
-import { Header } from "./layout/Header";
-import { Footer } from "./layout/Footer";
+import { Layout } from "./layout/Layout";
 
 import { Home } from './pages/Home'
 import { Test } from './pages/Test'
@@ -19,18 +18,16 @@ function App() {
   return (
         <>
             <Router>
-                <Header />
-                <main className='container content'>
-                    <Routes>
-                        <Route exact path='/' element ={<Home />} />
+                <Routes>
+                    <Route path='/' element ={<Layout />}>
+                        <Route index element ={<Home />} />
                         <Route path='/test' element ={<Test />} />
                         <Route path='/category/:nameCategory' element={<Category />} />
                         <Route path='meal/:idRecipe' element={<Recipe />} />
                         <Route path='/404' element={<NotFound />} />
                         <Route path='*' element={<Navigate replace to="/404" />} />
-                    </Routes>
-                </main>
-                <Footer />
+                    </Route>
+                </Routes>
             </Router>
         </>
   );

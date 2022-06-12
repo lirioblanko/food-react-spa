@@ -1,5 +1,7 @@
 import { useMemo } from "react";
-import { Link, Outlet } from 'react-router-dom'
+import { NavLink, Link, Outlet } from 'react-router-dom'
+
+const setActive = ({isActive}) => isActive ? 'header-link_active' : '';
 
 export function Layout () {
     const year = useMemo(() => {
@@ -13,7 +15,7 @@ export function Layout () {
                     <div className="nav-wrapper container">
                         <Link to="/" className="brand-logo">Food - React SPA</Link>
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
-                            <li><Link to="/test">Test routing</Link></li>
+                            <li><NavLink to="/test" className={setActive}>Test routing</NavLink></li>
                             <li><a href="https://github.com/lirioblanko/food-react-spa" target="_blank">Repo</a></li>
                         </ul>
                     </div>

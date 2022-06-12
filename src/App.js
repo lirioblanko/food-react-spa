@@ -21,11 +21,11 @@ function App() {
                 <Routes>
                     <Route path='/' element ={<Layout />}>
                         <Route index element ={<Home />} />
-                        <Route path='/test' element ={<Test />} />
-                        <Route path='/category/:nameCategory' element={<Category />} />
-                        <Route path='meal/:idRecipe' element={<Recipe />} />
-                        <Route path='/404' element={<NotFound />} />
-                        <Route path='*' element={<Navigate replace to="/404" />} />
+                        <Route path='test' element ={<Test />} />
+                        <Route path='category/:nameCategory' element={<Category />} />
+                        <Route path='category/:nameCategory/:idRecipe' element={<Recipe />} />
+                        <Route path='404' element={<NotFound />} />
+                        <Route path='*' element={<Navigate replace to="404" />} />
                     </Route>
                 </Routes>
             </Router>

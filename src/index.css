@@ -28,3 +28,7 @@ iframe {
   width: 600px;
   height: 350px;
 }
+
+.header-link_active {
+  color: #88AABF;
+}

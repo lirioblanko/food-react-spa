@@ -19,3 +19,12 @@ nav {
 .page-footer {
   padding-top: 0;
 }
+
+img,
+iframe {
+  max-width: 100%;
+}
+iframe {
+  width: 600px;
+  height: 350px;
+}

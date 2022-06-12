@@ -4,11 +4,11 @@ Node v17.5.0
 
 React Router v6
 
-##Front-end framework based on Material Design:
+## Front-end framework based on Material Design:
 
 [materializecss](https://materializecss.com/)
 
-##API:  
+## API:  
 
 [TheMealDB](https://themealdb.com/api.php)
 

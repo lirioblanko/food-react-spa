@@ -1,9 +1,15 @@
 # FOOD - REACT SPA
 
-Node v. 17.5.0
+Node v17.5.0
 
-react-router-dom
+React Router v6
 
 ##Front-end framework based on Material Design:
 
 [materializecss](https://materializecss.com/)
+
+##API:  
+
+[TheMealDB](https://themealdb.com/api.php)
+
+You can use Axios or Fetch API

@@ -23,7 +23,7 @@ export function Category() {
     return (
         <>
             {
-                !meal.length ? <Preloader /> : <MealList meal={meal} />
+                !meal.length ? <Preloader /> : <MealList meal={meal} nameCategory={nameCategory}/>
             }
         </>
     )

@@ -17,7 +17,7 @@ function App() {
 
   return (
         <>
-            <Router>
+            <Router basename='food-react-spa/'>
                 <Routes>
                     <Route path='/' element ={<Layout />}>
                         <Route index element ={<Home />} />

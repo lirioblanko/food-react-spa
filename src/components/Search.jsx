@@ -1,8 +1,6 @@
 import { useState } from "react";
 
-export function Search ({cb = Function.prototype}) {
-    const [value, setValue] = useState('')
-
+export function Search ({cb = Function.prototype, searchValue, setSearchValue }) {
     const handleKey = (e) => {
         if (e.key === 'Enter') {
             handleSubmit()
@@ -10,11 +8,11 @@ export function Search ({cb = Function.prototype}) {
     }
 
     const handleSubmit = () => {
-        cb(value)
+        cb(searchValue)
     }
 
     const handleInput = (e) => {
-        setValue(e.target.value)
+        setSearchValue(e.target.value.trim())
     }
 
     return (
@@ -25,7 +23,7 @@ export function Search ({cb = Function.prototype}) {
                     placeholder="search"
                     onKeyDown={handleKey}
                     onChange={handleInput}
-                    value={value}
+                    value={searchValue}
                 />
                 <button
                     className="btn search-btn"

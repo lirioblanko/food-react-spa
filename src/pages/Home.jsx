@@ -11,6 +11,7 @@ export function Home() {
 
     const [catalog, setCatalog] = useState([]);
     const [loading, setLoading] = useState(true)
+    const [searchValue, setSearchValue] = useState('')
     const [filteredCatalog, setFilteredCatalog] = useState([])
 
     const { pathname, search } = useLocation();
@@ -18,7 +19,10 @@ export function Home() {
 
     const handleSearch = (str) => {
         setFilteredCatalog(
-            catalog.filter(item => item.strCategory.toLowerCase().includes(str.toLowerCase()))
+            catalog.filter(item =>
+                item.strCategory
+                    .toLowerCase()
+                    .includes(str.toLowerCase()))
         )
         navigate({
             pathname,
@@ -29,14 +33,16 @@ export function Home() {
     useEffect(() => {
         api.food.getAllCategories()
             .then(data => {
-                data.categories && setCatalog(data.categories.slice(0, data.categories.length-2))
+                const showAllCategories = data.categories.slice(0, data.categories.length-2)
+
+                data.categories && setCatalog(showAllCategories)
                 setLoading(false)
                 setFilteredCatalog( search ?
-                    data.categories.slice(0, data.categories.length-2).filter(item =>
+                    showAllCategories.filter(item =>
                         item.strCategory
                             .toLowerCase()
                             .includes(search.split('=')[1].toLowerCase())
-                    ) : data.categories.slice(0, data.categories.length-2)
+                    ) : showAllCategories
                 );
             })
             .catch(err => {
@@ -46,9 +52,9 @@ export function Home() {
 
     return (
         <>
-            <Search cb={handleSearch} />
+            <Search cb={handleSearch} searchValue={searchValue} setSearchValue={setSearchValue}/>
             {
-                loading ? <Preloader /> : <CategoriesList catalog={filteredCatalog} />
+                loading ? <Preloader /> : <CategoriesList catalog={filteredCatalog} searchValue={searchValue} setSearchValue={setSearchValue}/>
             }
         </>
     )

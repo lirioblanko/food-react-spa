@@ -1,13 +1,25 @@
 import './categories.css';
 import { CategoriesItem } from './CategoriesItem'
+import { useNavigate } from 'react-router-dom'
 
-export function CategoriesList ({ catalog = [] }) {
+export function CategoriesList ({ catalog = [], setSearchValue }) {
+    const navigate = useNavigate();
+
+    const goBack = () => {
+        navigate(-1)
+        setSearchValue('')
+    }
 
     return (
             <div className='categories-list'>
             { catalog.length ? catalog.map(item => {
                 return <CategoriesItem key = {item.idCategory} { ...item}/>
-            }) : <h4>404 ошибка</h4> }
+            }) : (
+                <div>
+                    <h4>Ничего не найдено</h4>
+                    <button onClick={goBack}>Назад</button>
+                </div>
+            ) }
         </div>
     )
 }

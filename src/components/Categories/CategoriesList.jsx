@@ -17,7 +17,7 @@ export function CategoriesList ({ catalog = [], setSearchValue }) {
             }) : (
                 <div>
                     <h4>Ничего не найдено</h4>
-                    <button onClick={goBack}>Назад</button>
+                    <button className="btn" onClick={goBack}>Назад</button>
                 </div>
             ) }
         </div>

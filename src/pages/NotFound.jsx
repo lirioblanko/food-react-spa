@@ -6,7 +6,7 @@ export function NotFound() {
     return (
         <>
             <h1>404: Page not found</h1>
-            <button onClick={() => navigate(-1)}>Back</button>
+            <button className="btn" onClick={() => navigate(-1)}>Back</button>
         </>
     )
 }

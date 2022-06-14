@@ -64,7 +64,7 @@ export function Recipe() {
                     <p>{ recipe.strInstructions }</p>
                 </div>
             )}
-            <button onClick={() => navigate(-1)}>Back</button>
+            <button className="btn" onClick={() => navigate(-1)}>Back</button>
         </>
     )
 }

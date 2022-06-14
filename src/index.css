@@ -16,19 +16,26 @@ nav {
   padding: 0 1rem;
 }
 
+@media only screen and (max-width: 576px) {
+  nav .brand-logo {
+    left: 0;
+    transform: translateX(0%);
+  }
+}
+
 .page-footer {
   padding-top: 0;
 }
 
-img,
-iframe {
-  max-width: 100%;
-}
-iframe {
-  width: 600px;
-  height: 350px;
-}
-
 .header-link_active {
   color: #88AABF;
+}
+
+.search-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.search-btn {
+  margin-left: 2rem;
 }

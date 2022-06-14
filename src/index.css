@@ -39,3 +39,11 @@ nav {
 .search-btn {
   margin-left: 2rem;
 }
+
+.btn {
+  background-color: #88AABF;
+}
+
+.btn:hover, .btn:active {
+  background-color: #A7BDD9;
+}

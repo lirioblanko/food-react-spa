@@ -1,8 +1,9 @@
-## Demo:
-<https://lirioblanko.github.io/food-react-spa/>
+## [Demo](https://lirioblanko.github.io/food-react-spa/)
 
-***
+
 Node v17.5.0
+
+React v18
 
 React Router v6
 
